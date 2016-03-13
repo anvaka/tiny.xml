@@ -1,6 +1,6 @@
 {
   "name": "tiny.xml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny in-browser xml parser",
   "main": "index.js",
   "scripts": {
