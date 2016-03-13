@@ -1,34 +1,39 @@
 # tiny.xml
 
-Tiny in-browser xml parser. This module is not supposed to work from node.js
-If you want node.js version [try something else](https://anvaka.github.io/npmrank/online/#tag=xml)
+Tiny in-browser xml parser. 2.6KB minified or **1.6KB** minified and gzipped.
+
+This module is not supposed to work from node.js. If you want node.js version
+[try something else](https://anvaka.github.io/npmrank/online/#tag=xml).
 
 # usage
 
 ``` js
+// If you are using a bundler like browserify/webpack. Otherwise it should
+// be available on the window itself
+var tinyxml = require('tiny.xml')
+
 var xmlString = '<?xml version="1.0" ?>' +
  '<items xmlns="http://foo.com">' +
  ' <item>Foo</item>' +
  ' <item color="green">Bar</item>' +
  '</items>'
 
-var tinyxml = require('tiny.xml')
 var parser = tinyxml(xmlString)
 var nodes = parser.selectNodes('item')
-assert(nodes.length === 2, 'it found two nodes')
+console.log(nodes.length === 2, 'it found two nodes')
 
 // Nodes are actual browser elements: https://developer.mozilla.org/en-US/docs/Web/API/Element
 var firstNode = nodes[0]
-assert(firstNode instanceof Element)
+console.log(firstNode instanceof Element, 'It is instance of Element')
 
 // Since we are using standard browser API, powerful Element interface is supported:
 var root = parser.selectNodes('items')[0]
 
 var all = root.querySelectorAll('item')
-assert(all.length === 2, 'matches all item elements')
+console.log(all.length === 2, 'matches all item elements')
 
 var greenNode = root.querySelector('item[color="green"]')
-assert(greenNode.textContent === 'Bar', 'picks only one green node')
+console.log(greenNode.textContent === 'Bar', 'picks only one green node')
 ```
 
 # install
