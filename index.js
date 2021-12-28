@@ -82,8 +82,8 @@ function extractNodeNamespaces(node) {
     var attr = node.attributes[i];
     if (attr.name.match(/^xmlns/)) {
       var parts = attr.name.split(':');
-      var prefx = parts.length === 1 ? 'x' : parts[1];
-      result[prefx] = attr.value;
+      var prefix = parts.length === 1 ? 'x' : parts[1];
+      result[prefix] = attr.value;
     }
   }
   return result;
