@@ -19,8 +19,10 @@
     "url": "https://github.com/anvaka/tiny.xml"
   },
   "devDependencies": {
-    "jasmine-core": "^2.4.1",
-    "karma": "^0.13.22",
-    "karma-jasmine": "^0.3.7"
+    "browserify": "^17.0.0",
+    "jasmine-core": "^4.3.0",
+    "karma": "^6.4.0",
+    "karma-jasmine": "^5.1.0",
+    "uglify-js": "^3.17.0"
   }
 }
