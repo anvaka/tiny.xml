@@ -48,10 +48,10 @@ Or use pre-build version from CDN:
 
 ``` html
 <!-- Unminified 3.3KB -->
-<script src="https://cdn.rawgit.com/anvaka/tiny.xml/master/dist/tinyxml.js"></script>
+<script src="https://cdn.rawgit.com/anvaka/tiny.xml/main/dist/tinyxml.js"></script>
 
 <!-- minified 2.6KB -->
-<script src="https://cdn.rawgit.com/anvaka/tiny.xml/master/dist/tinyxml.min.js"></script>
+<script src="https://cdn.rawgit.com/anvaka/tiny.xml/main/dist/tinyxml.min.js"></script>
 ```
 
 If you are using browser version the library will be exposed under `tinyxml` name.
